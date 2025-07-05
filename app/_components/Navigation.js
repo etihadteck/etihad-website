@@ -17,7 +17,7 @@ export default async function Navigation() {
             href="/packages"
             className="bg-accent-500 hover:bg-accent-700 rounded-xl px-6 py-3 transition-colors"
           >
-            ابحث عن شحنتك
+            سجل الشحنات
           </Link>
         </li>
       </ul>
