@@ -2,8 +2,8 @@ import SearchForm from './SearchForm';
 
 function Search() {
   return (
-    <div className="mt-16 flex flex-col gap-16">
-      <p className="text-accent-400 text-center text-6xl font-bold">
+    <div className="mt-10 flex flex-col gap-8 sm:mt-16 sm:gap-16">
+      <p className="text-accent-400 text-center text-2xl font-bold sm:text-4xl lg:text-6xl">
         ابحث عن شحنتك
       </p>
 

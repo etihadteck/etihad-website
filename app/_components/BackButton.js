@@ -11,7 +11,10 @@ function BackButton({ label = '' }) {
     router.push('/packages');
   }
   return (
-    <form action={handleBack} className="flex items-center justify-center">
+    <form
+      action={handleBack}
+      className="flex flex-col items-center justify-center md:flex-row"
+    >
       <button
         type="submit"
         className="bg-accent-500 hover:bg-accent-700 rounded-full px-4 py-4 transition-colors"

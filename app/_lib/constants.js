@@ -15,7 +15,7 @@ export const SHIPMENT_STATUSES = {
     description: 'الشحنة جاية بالطريق للميناء 🚢',
   },
   'reached-harbor': {
-    label: 'وصل الميناء',
+    label: 'في الميناء',
     color: 'text-blue-600',
     bgColor: 'bg-orange-50',
     borderColor: 'border-orange-200',
@@ -33,6 +33,6 @@ export const SHIPMENT_STATUSES = {
 export const SHIPMENT_STATUS_OPTIONS = [
   { value: 'collected-in-china', label: 'في الصين' },
   { value: 'in-ocean', label: 'في البحر' },
-  { value: 'reached-harbor', label: 'وصلت الميناء' },
+  { value: 'reached-harbor', label: 'في الميناء' },
   { value: 'in-storage-ready', label: 'في المستودع' },
 ];

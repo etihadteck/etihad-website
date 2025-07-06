@@ -1,9 +1,11 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 export default function LocalPackages() {
   const [packageIds, setPackageIds] = useState([]);
+  const router = useRouter();
 
   useEffect(() => {
     const packageIdsString = localStorage.getItem('packageIds');
@@ -11,8 +13,12 @@ export default function LocalPackages() {
     setPackageIds(parsed);
   }, []);
 
+  const handlePackageClick = (packageId) => {
+    router.push(`/packages/${packageId}`);
+  };
+
   return (
-    <div className="flex flex-wrap justify-center gap-4">
+    <>
       {packageIds.length <= 0 ? (
         <p className="text-accent-50 text-md font-medium">
           لا يوجد شحنات مخزنة
@@ -20,8 +26,9 @@ export default function LocalPackages() {
       ) : (
         packageIds.map((packageId, index) => (
           <div
+            onClick={() => handlePackageClick(packageId)}
             key={`${packageId}-${index}`}
-            className="bg-accent-50 text-accent-700 flex w-44 flex-col items-center justify-center gap-4 rounded-md px-8 py-4"
+            className="bg-accent-50 text-accent-700 flex w-44 cursor-pointer flex-col items-center justify-center gap-4 rounded-md px-8 py-4"
           >
             <span>رقم الشحنة</span>
             <span className="bg-accent-200 rounded-md px-4 py-2 font-medium">
@@ -30,6 +37,6 @@ export default function LocalPackages() {
           </div>
         ))
       )}
-    </div>
+    </>
   );
 }

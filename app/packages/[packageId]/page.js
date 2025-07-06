@@ -6,7 +6,7 @@ export default async function Page({ params }) {
   const { packageId } = await params;
 
   return (
-    <main className="text-accent-100 mt-4 text-center text-2xl font-bold">
+    <main className="text-accent-100 +xs:text-2xl mt-4 text-center text-base font-bold">
       <Suspense fallback={<Spinner />}>
         <PackageDetails packageId={packageId} />
       </Suspense>

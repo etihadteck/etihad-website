@@ -13,9 +13,9 @@ export default async function PackageDetails({ packageId }) {
         <BackButton />
       </div>
       <div className="bg-primary-900 flex flex-col items-center justify-center gap-16 rounded-xl px-10 py-16">
-        <p className="text-5xl font-bold">تفاصيل الشحنة</p>
+        <p className="text-2xl font-bold lg:text-5xl">تفاصيل الشحنة</p>
 
-        <div className="flex items-center gap-30">
+        <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-30">
           <div className="flex items-center gap-2">
             <span>رقم الشحنة</span>
             <span className="bg-accent-50 text-accent-700 rounded-md px-6 py-2 text-center">

@@ -14,8 +14,8 @@ export default function Page() {
         alt="Mountains and forests with two cabins"
       />
 
-      <div className="relative z-10 space-y-24 text-center">
-        <h1 className="text-center text-8xl font-bold text-white">
+      <div className="xs:space-y-24 relative z-10 space-y-16 text-center">
+        <h1 className="text-center text-4xl font-bold text-white sm:text-6xl lg:text-8xl">
           شركة الاتحاد للشحن
         </h1>
 

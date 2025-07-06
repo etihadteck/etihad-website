@@ -59,7 +59,7 @@ function ProgressBar({ status: dbStatus }) {
   }, [dbStatus]);
 
   return (
-    <div className="mt-12 flex items-center justify-center">
+    <div className="mt-12 flex flex-col items-center justify-center md:flex-row">
       {SHIPMENT_STATUS_OPTIONS.map((status, index, array) => {
         const isCircleFilled =
           filledSteps.circles[index] || index <= currentStep;
@@ -68,27 +68,24 @@ function ProgressBar({ status: dbStatus }) {
           (filledSteps.lines[index] || index < currentStep);
 
         return (
-          <div
-            key={`${index}`}
-            className="flex items-center justify-center transition-colors"
-          >
-            <div className="mt-6 flex flex-col items-center justify-center gap-1 text-center text-sm font-semibold">
+          <div key={`${index}`} className="flex flex-col justify-start">
+            <div className="flex flex-col items-center justify-center transition-colors md:flex-row">
               <div
-                className={`${isCircleFilled ? 'text-accent-50 bg-green-600' : 'bg-accent-50 text-primary-950'} rounded-full px-10 py-8.5 transition-colors duration-1000 ease-in-out`}
+                className={`${isCircleFilled ? 'text-accent-50 bg-green-600' : 'bg-accent-50 text-primary-950'} xs:text-base rounded-full px-10 py-8.5 text-center text-sm font-semibold transition-colors duration-1000 ease-in-out md:px-6 md:py-4 md:text-sm lg:px-10 lg:py-8.5 lg:text-base`}
               >
                 {isCircleFilled ? (
-                  <HiCheck className="h-6 w-6 font-bold" />
+                  <HiCheck className="h-6 w-6 font-bold md:h-3 md:w-3 lg:h-6 lg:w-6" />
                 ) : (
-                  index + 1
+                  status.label
                 )}
               </div>
-              <span className="text-accent-50">{status.label}</span>
+
+              {index + 1 < array.length && (
+                <div
+                  className={`${isLineFilled ? 'bg-green-600' : 'bg-accent-50'} px-3 py-14 transition-colors duration-1000 ease-in-out md:px-18 md:py-1`}
+                />
+              )}
             </div>
-            {index + 1 < array.length && (
-              <div
-                className={`${isLineFilled ? 'bg-green-600' : 'bg-accent-50'} px-18 py-1 transition-colors duration-1000 ease-in-out`}
-              />
-            )}
           </div>
         );
       })}
