@@ -1,5 +1,6 @@
 // import { Geist, Geist_Mono } from 'next/font/google';
 import Header from './_components/Header';
+import ScrollToTop from './_components/ScrollToTop';
 import './globals.css';
 
 export const metadata = {
@@ -23,6 +24,10 @@ export default function RootLayout({ children }) {
           <main className="mx-auto w-full max-w-md md:max-w-2xl lg:max-w-7xl">
             {children}
           </main>
+        </div>
+
+        <div className="hidden max-md:block">
+          <ScrollToTop />
         </div>
       </body>
     </html>

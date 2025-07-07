@@ -11,7 +11,7 @@ export default function Page() {
         placeholder="blur"
         className="object-cover object-top"
         quality={90}
-        alt="Mountains and forests with two cabins"
+        alt="Worldwide shipping company"
       />
 
       <div className="xs:space-y-24 relative z-10 space-y-16 text-center">

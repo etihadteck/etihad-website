@@ -5,15 +5,7 @@ import Link from 'next/link';
 export default function Navigation({ onNavigate }) {
   return (
     <nav className="z-10 text-xl">
-      <ul className="xs:flex-row flex flex-col items-center gap-16">
-        {/* <li>
-          <Link
-            href="/about"
-            className="hover:text-accent-400 transition-colors"
-          >
-            من نكون
-          </Link>
-        </li> */}
+      <ul className="flex flex-col-reverse items-center gap-16 md:flex-row">
         <li>
           <Link
             href="/packages"
@@ -21,6 +13,15 @@ export default function Navigation({ onNavigate }) {
             onClick={onNavigate}
           >
             سجل الشحنات
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/about"
+            className="hover:text-accent-400 transition-colors"
+            onClick={onNavigate}
+          >
+            مـن نـحـــن
           </Link>
         </li>
       </ul>

@@ -10,25 +10,25 @@ function HamBurg() {
 
   return (
     <>
-      {/* Regular navigation for xs and above */}
-      <div className="xs:block hidden">
+      {/* Regular navigation for md and above */}
+      <div className="hidden md:block">
         <Navigation />
       </div>
 
-      {/* Burger menu only for xs screens */}
-      <div className="xs:hidden block">
+      {/* Burger menu only for md screens */}
+      <div className="block md:hidden">
         <button
           className="text-grey-500 text-2xl"
           aria-label="Open menu"
           onClick={() => setIsSidebarOpen(true)}
         >
-          <HiMenu />
+          <HiMenu className="text-accent-700 h-10 w-10 sm:h-12 sm:w-12" />
         </button>
       </div>
 
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
-        <div className="xs:hidden fixed inset-0 z-50 flex h-lvh items-center justify-center">
+        <div className="fixed inset-0 z-50 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
           <div
             className="absolute inset-0 bg-black/20 backdrop-blur-xl transition-opacity"
