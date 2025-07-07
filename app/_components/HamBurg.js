@@ -31,9 +31,13 @@ function HamBurg() {
         <div className="fixed inset-0 z-50 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
           <div
-            className="absolute inset-0 bg-black/40 backdrop-blur-xl transition-opacity"
+            className="absolute inset-0 bg-black/50 backdrop-blur-xl transition-opacity"
             onClick={() => setIsSidebarOpen(false)}
-            style={{ WebkitBackdropFilter: 'blur(24px)' }}
+            style={{
+              WebkitBackdropFilter: 'blur(24px)',
+              backdropFilter: 'blur(24px)',
+              transform: 'translateZ(0)',
+            }}
           />
 
           <aside
