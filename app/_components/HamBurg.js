@@ -44,7 +44,7 @@ function HamBurg() {
           /> */}
 
           <aside
-            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 p-6"
+            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 bg-black/50 p-6"
             style={{ minWidth: 260 }}
           >
             <Logo onNavigate={() => setIsSidebarOpen(false)} />
