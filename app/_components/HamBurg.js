@@ -1,13 +1,11 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { HiMenu } from 'react-icons/hi';
 import Navigation from '@/app/_components/Navigation';
 import Logo from './Logo';
 
-function HamBurg() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
+function HamBurg({ isSidebarOpen, setIsSidebarOpen }) {
   // Prevent body scroll when sidebar is open
   useEffect(() => {
     if (isSidebarOpen) {
@@ -44,7 +42,7 @@ function HamBurg() {
         <div className="fixed inset-0 z-50 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
           <div
-            className="bg-primary-950/40 absolute inset-0 top-0 blur-md backdrop-blur-md"
+            className="bg-primary-950/50 absolute inset-0 backdrop-blur-xl"
             onClick={() => setIsSidebarOpen(false)}
           />
 
