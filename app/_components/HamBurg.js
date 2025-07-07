@@ -1,12 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { HiMenu } from 'react-icons/hi';
 import Navigation from '@/app/_components/Navigation';
 import Logo from './Logo';
 
 function HamBurg() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  // Prevent body scroll when sidebar is open
+  useEffect(() => {
+    if (isSidebarOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    // Clean up on unmount
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isSidebarOpen]);
 
   return (
     <>
@@ -28,12 +41,9 @@ function HamBurg() {
 
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
-        <header
-          className="fixed inset-0 top-0 z-100 flex h-lvh items-center justify-center bg-black/75 backdrop-blur-xl md:hidden"
-          onClick={() => setIsSidebarOpen(false)}
-        >
+        <div className="fixed inset-0 z-100 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
-          {/* <div
+          <div
             className="absolute inset-0 top-0 bg-black/75 backdrop-blur-xl"
             onClick={() => setIsSidebarOpen(false)}
             style={{
@@ -41,7 +51,7 @@ function HamBurg() {
               backdropFilter: 'blur(24px)',
               transform: 'translateZ(0)',
             }}
-          /> */}
+          />
 
           <aside
             className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 rounded-xl bg-black px-6 py-24"
@@ -52,7 +62,7 @@ function HamBurg() {
               <Navigation onNavigate={() => setIsSidebarOpen(false)} />
             </div>
           </aside>
-        </header>
+        </div>
       )}
     </>
   );
