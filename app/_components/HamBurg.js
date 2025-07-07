@@ -33,6 +33,7 @@ function HamBurg() {
           <div
             className="absolute inset-0 bg-black/20 backdrop-blur-xl transition-opacity"
             onClick={() => setIsSidebarOpen(false)}
+            style={{ WebkitBackdropFilter: 'blur(24px)' }}
           />
 
           <aside
