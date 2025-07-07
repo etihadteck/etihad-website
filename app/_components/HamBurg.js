@@ -28,7 +28,7 @@ function HamBurg() {
 
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 z-50 flex h-lvh items-center justify-center md:hidden">
+        <div className="fixed inset-0 z-100 flex h-lvh items-center justify-center border-4 border-red-500 md:hidden">
           {/* Overlay with blur */}
           <div
             className="absolute inset-0 bg-black/50 backdrop-blur-xl transition-opacity"
