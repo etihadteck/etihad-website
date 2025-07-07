@@ -28,23 +28,23 @@ function HamBurg() {
 
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
-        <div
-          className="fixed inset-0 z-100 flex h-lvh items-center justify-center md:hidden"
+        <header
+          className="fixed inset-0 top-0 z-100 flex h-lvh items-center justify-center bg-black/75 backdrop-blur-xl md:hidden"
           onClick={() => setIsSidebarOpen(false)}
         >
           {/* Overlay with blur */}
-          <div
-            className="absolute inset-0 top-0 bg-black/50 backdrop-blur-sm transition-opacity"
+          {/* <div
+            className="absolute inset-0 top-0 bg-black/75 backdrop-blur-xl"
             onClick={() => setIsSidebarOpen(false)}
             style={{
               WebkitBackdropFilter: 'blur(24px)',
               backdropFilter: 'blur(24px)',
               transform: 'translateZ(0)',
             }}
-          />
+          /> */}
 
           <aside
-            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 rounded-xl bg-black/90 px-6 py-24"
+            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 rounded-xl bg-black px-6 py-24"
             style={{ minWidth: 260 }}
           >
             <Logo onNavigate={() => setIsSidebarOpen(false)} />
@@ -52,7 +52,7 @@ function HamBurg() {
               <Navigation onNavigate={() => setIsSidebarOpen(false)} />
             </div>
           </aside>
-        </div>
+        </header>
       )}
     </>
   );
