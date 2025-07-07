@@ -41,10 +41,10 @@ function HamBurg() {
 
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 z-100 flex h-lvh items-center justify-center md:hidden">
+        <div className="fixed inset-0 z-50 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
           <div
-            className="bg-primary-950/90 absolute inset-0 top-0 backdrop-blur-xl"
+            className="bg-primary-950/90 absolute inset-0 top-0 backdrop-blur-sm"
             onClick={() => setIsSidebarOpen(false)}
             style={{
               WebkitBackdropFilter: 'blur(24px)',
