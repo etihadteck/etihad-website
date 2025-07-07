@@ -31,7 +31,7 @@ function HamBurg() {
         <div className="fixed inset-0 z-100 flex h-lvh items-center justify-center md:hidden">
           {/* Overlay with blur */}
           <div
-            className="absolute inset-0 z-150 bg-black/50 backdrop-blur-xl transition-opacity"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
             onClick={() => setIsSidebarOpen(false)}
             style={{
               WebkitBackdropFilter: 'blur(24px)',
@@ -41,7 +41,7 @@ function HamBurg() {
           />
 
           <aside
-            className="animate-slide-in-right relative z-151 mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 p-6"
+            className="animate-slide-in-right relative z-101 mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 p-6"
             style={{ minWidth: 260 }}
           >
             <Logo onNavigate={() => setIsSidebarOpen(false)} />
