@@ -29,11 +29,11 @@ function HamBurg() {
       {/* Mobile sidebar overlay */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 z-100 flex h-lvh items-center justify-center bg-black/50 backdrop-blur-sm md:hidden"
+          className="fixed inset-0 z-100 flex h-lvh items-center justify-center md:hidden"
           onClick={() => setIsSidebarOpen(false)}
         >
           {/* Overlay with blur */}
-          {/* <div
+          <div
             className="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
             onClick={() => setIsSidebarOpen(false)}
             style={{
@@ -41,10 +41,10 @@ function HamBurg() {
               backdropFilter: 'blur(24px)',
               transform: 'translateZ(0)',
             }}
-          /> */}
+          />
 
           <aside
-            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 bg-black/50 p-6"
+            className="animate-slide-in-right relative mx-auto flex w-4/5 max-w-xs flex-col items-center gap-8 bg-black/90 px-6 py-12"
             style={{ minWidth: 260 }}
           >
             <Logo onNavigate={() => setIsSidebarOpen(false)} />
