@@ -1,4 +1,5 @@
 // import { Geist, Geist_Mono } from 'next/font/google';
+import Footer from './_components/Footer';
 import Header from './_components/Header';
 import ScrollToTop from './_components/ScrollToTop';
 import './globals.css';
@@ -25,6 +26,8 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </div>
+
+        <Footer />
 
         <div className="hidden max-md:block">
           <ScrollToTop />
