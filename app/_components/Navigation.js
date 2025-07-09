@@ -9,7 +9,7 @@ export default function Navigation({ onNavigate }) {
         <li>
           <Link
             href="/packages"
-            className="bg-accent-500 hover:bg-accent-700 rounded-xl px-6 py-3 transition-colors"
+            className="bg-accent-500 hover:bg-accent-700 rounded-xl px-6 py-3 transition-colors duration-300"
             onClick={onNavigate}
           >
             سجل الشحنات
@@ -18,7 +18,7 @@ export default function Navigation({ onNavigate }) {
         <li>
           <Link
             href="/about"
-            className="hover:text-accent-400 transition-colors"
+            className="bg-accent-500 hover:bg-accent-700 md:hover:bg-accent-500 md:border-accent-500 rounded-xl px-6 py-3 transition-colors duration-800 ease-in-out md:border-b md:bg-transparent"
             onClick={onNavigate}
           >
             مـن نـحـــن

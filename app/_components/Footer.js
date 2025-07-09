@@ -7,12 +7,12 @@ function Footer() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
           {/* Contact Information */}
           <div className="space-y-4">
-            <h3 className="mb-4 text-xl font-bold text-blue-400 lg:text-center">
+            <h3 className="mb-4 text-base font-bold text-blue-400 lg:text-center lg:text-xl">
               معلومات الاتصال
             </h3>
             <div className="flex flex-col justify-around gap-4 lg:flex-row">
               <div className="flex items-start gap-1 space-x-3 rtl:space-x-reverse">
-                <span className="text-2xl">📱</span>
+                <span className="text-md sm:text-2xl">📱</span>
                 <div>
                   <p className="font-semibold">رقم الجوال (الصين)</p>
                   <p className="text-gray-300">+86 159 1573 2732</p>
@@ -20,7 +20,7 @@ function Footer() {
               </div>
 
               <div className="flex items-start gap-1 space-x-3 rtl:space-x-reverse">
-                <span className="text-2xl">📧</span>
+                <span className="text-md sm:text-2xl">📧</span>
                 <div>
                   <p className="font-semibold">البريد الإلكتروني</p>
                   <p className="text-gray-300">etihadco@aol.com</p>
@@ -28,7 +28,7 @@ function Footer() {
               </div>
 
               <div className="flex items-start gap-1 space-x-3 rtl:space-x-reverse">
-                <span className="text-2xl">🕘</span>
+                <span className="text-md sm:text-2xl">🕘</span>
                 <div className="flex flex-col gap-1">
                   <p className="font-semibold">ساعات العمل</p>
                   <p className="text-gray-300">من 9:00 صباحًا حتى 6:00 مساءً</p>
@@ -49,7 +49,7 @@ function Footer() {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="mb-4 text-xl font-bold text-blue-400 lg:text-center">
+            <h3 className="mb-4 text-base font-bold text-blue-400 lg:text-center lg:text-xl">
               روابط سريعة
             </h3>
             <ul className="flex flex-col justify-around gap-4 lg:flex-row">
