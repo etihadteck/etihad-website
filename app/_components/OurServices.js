@@ -19,7 +19,7 @@ function OurServices() {
         <div className="flex flex-col items-center space-y-4 md:items-start">
           <FaBoxOpen className="text-accent-700 text-4xl" />
           <h2 className="text-xl font-bold">
-            شحن جزئي (LCL) من جميع المدن والمصانع في الصين
+            شحن جزئي وكلي (LCL) من جميع المدن والمصانع في الصين
           </h2>
         </div>
 
@@ -27,14 +27,16 @@ function OurServices() {
         <div className="flex flex-col items-center space-y-4 md:items-start">
           <FaIndustry className="text-accent-700 text-4xl" />
           <h2 className="text-xl font-bold">
-            تجميع شحنات متعددة من أكثر من مورد
+            تجميع الشحنات من عدة موردين مختلفين
           </h2>
         </div>
 
         {/* 3 */}
         <div className="flex flex-col items-center space-y-4 md:items-start">
           <FaFileAlt className="text-accent-700 text-4xl" />
-          <h2 className="text-xl font-bold">تخليص جمركي كامل داخل المملكة</h2>
+          <h2 className="text-xl font-bold">
+            تخليص جمركي كامل داخل السعودية واليمن
+          </h2>
         </div>
 
         {/* 4 */}
@@ -48,13 +50,15 @@ function OurServices() {
         {/* 5 */}
         <div className="flex flex-col items-center space-y-4 md:items-start">
           <FaShieldAlt className="text-accent-700 text-4xl" />
-          <h2 className="text-xl font-bold">تغليف آمن واحترافي</h2>
+          <h2 className="text-xl font-bold">تغليف وتعبئة آمن واحترافي</h2>
         </div>
 
         {/* 6 */}
         <div className="flex flex-col items-center space-y-4 md:items-start">
           <FaChartLine className="text-accent-700 text-4xl" />
-          <h2 className="text-xl font-bold">متابعة مستمرة لحالة الشحنة</h2>
+          <h2 className="text-xl font-bold">
+            متابعة مستمرة لحالة الشحنة حتى التسليم
+          </h2>
         </div>
       </div>
     </>

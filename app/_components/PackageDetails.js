@@ -6,45 +6,68 @@ import PackageDetailsClient from './PackageDetailsClient';
 
 export default async function PackageDetails({ packageId }) {
   const packageData = await getPackageById(packageId);
+  console.log(packageData);
 
   return (
     <div className="relative flex flex-col items-center justify-center">
       <div className="absolute top-0 left-0 z-10 flex w-full justify-end">
         <BackButton />
       </div>
-      <div className="bg-primary-900 flex flex-col items-center justify-center gap-16 rounded-xl px-10 py-16">
-        <p className="text-2xl font-bold lg:text-5xl">تفاصيل الشحنة</p>
+      <div className="bg-primary-900 grid grid-cols-2 gap-4 rounded-xl px-10 py-16 text-xs sm:text-sm lg:grid-cols-3 lg:gap-16 lg:text-base">
+        {/* <p className="text-2xl font-bold lg:text-5xl">تفاصيل الشحنة</p> */}
 
-        <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-30">
-          <div className="flex items-center gap-2">
-            <span>رقم الشحنة</span>
-            <span className="bg-accent-50 text-accent-700 rounded-md px-6 py-2 text-center">
-              {packageData.packageId}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span>تاريخ الوصول</span>
-            <span className="bg-accent-50 text-accent-700 rounded-md px-6 py-2 text-center">
-              {packageData.arrivalDate}
-            </span>
-          </div>
-        </div>
+        {/* <div className="flex flex-col items-center gap-10 lg:flex-row lg:gap-30">
+          
+        </div> */}
 
-        <div className="flex flex-col items-center gap-8">
-          <div className="flex items-center gap-2">
-            <span>حالة الشحنة</span>
-            <span
-              className={`${SHIPMENT_STATUSES[packageData.status].color} ${SHIPMENT_STATUSES[packageData.status].bgColor} ${SHIPMENT_STATUSES[packageData.status].borderColor} text-center" rounded-md px-6 py-2`}
-            >
-              {SHIPMENT_STATUSES[packageData.status].label}
-            </span>
-          </div>
-          <p className="text-accent-50">
-            {SHIPMENT_STATUSES[packageData.status].description}
+        <div className="grid grid-cols-1 gap-2">
+          <p>رقم الشحنة</p>
+          <p className="bg-accent-50 text-accent-700 mx-auto w-full rounded-md py-2 text-center lg:px-24">
+            {packageData.packageId}
           </p>
         </div>
+
+        <div className="grid grid-cols-1 gap-2">
+          <p>حالة الشحنة</p>
+          <p
+            className={`${SHIPMENT_STATUSES[packageData.status].color} ${SHIPMENT_STATUSES[packageData.status].bgColor} ${SHIPMENT_STATUSES[packageData.status].borderColor} text-center" w-full rounded-md px-6 py-2`}
+          >
+            {SHIPMENT_STATUSES[packageData.status].label}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-2">
+          <p>تاريخ الوصول المتوقع</p>
+          <p className="bg-accent-50 text-accent-700 w-full rounded-md px-3 py-2 text-center">
+            {packageData.arrivalDate}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-2">
+          <p>سعر الشحنة</p>
+          <p className="bg-accent-50 text-accent-700 w-full rounded-md px-6 py-2">
+            {packageData.price}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-2">
+          <p>وزن الشحنة</p>
+          <p className="bg-accent-50 text-accent-700 w-full rounded-md px-6 py-2 text-center">
+            {packageData.weight}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 gap-2">
+          <p>CBM</p>
+          <p className="bg-accent-50 text-accent-700 w-full rounded-md px-6 py-2 text-center">
+            {packageData.cbm}
+          </p>
+        </div>
+
+        <div className="col-span-full">
+          <ProgressBar status={packageData.status} />
+        </div>
       </div>
-      <ProgressBar status={packageData.status} />
 
       <PackageDetailsClient packageId={packageId} />
     </div>

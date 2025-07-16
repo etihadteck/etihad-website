@@ -21,11 +21,6 @@ export default function PackageDetailsClient({ packageId }) {
 
       // Save updated array back to localStorage
       localStorage.setItem('packageIds', JSON.stringify(packageIdsArray));
-
-      console.log('Package ID added to array:', packageId);
-      console.log('All package IDs:', packageIdsArray);
-    } else {
-      console.log('Package ID already exists:', packageId);
     }
   }
 

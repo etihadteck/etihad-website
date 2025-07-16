@@ -6,7 +6,7 @@ export async function getPackageById(id) {
     .from('packages')
     .select(
       `
-      packageId,
+      *,
       shipments:shipmentId (
         status,
         arrivalDate
@@ -25,5 +25,8 @@ export async function getPackageById(id) {
     packageId: data.packageId,
     status: data.shipments.status,
     arrivalDate: data.shipments.arrivalDate,
+    price: data.price,
+    weight: data.weight,
+    cbm: data.cbm,
   };
 }
