@@ -6,7 +6,7 @@ function Footer() {
       <div className="container mx-auto lg:px-4">
         <div className="grid grid-cols-2 lg:gap-6">
           {/* Contact Information */}
-          <div className="space-y-4">
+          <div className="flex flex-col items-center lg:items-stretch">
             <h3 className="mb-4 text-base font-bold text-blue-400 lg:text-center lg:text-xl">
               معلومات الاتصال
             </h3>
@@ -15,7 +15,7 @@ function Footer() {
                 <span className="text-base sm:text-2xl">📱</span>
                 <div className="text-sm">
                   <p className="font-semibold">رقم الجوال (الصين)</p>
-                  <p className="text-gray-300" dir="ltr">
+                  <p className="xs:text-sm text-xs text-gray-300" dir="ltr">
                     +86 159 1573 2732
                   </p>
                 </div>
@@ -41,11 +41,11 @@ function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex flex-col items-center md:items-stretch">
+          <div className="flex flex-col items-center lg:items-stretch">
             <h3 className="mb-4 text-base font-bold text-blue-400 lg:text-center lg:text-xl">
               روابط سريعة
             </h3>
-            <ul className="flex flex-col items-center justify-around gap-4 lg:flex-row">
+            <ul className="flex flex-col items-center justify-around gap-4">
               <li>
                 <Link
                   href="/"
