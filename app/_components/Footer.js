@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function Footer() {
   return (
-    <footer className="z-20 mt-28 bg-gray-900 py-6 text-white">
+    <footer className="z-20 mt-24 bg-gray-900 py-6 text-white lg:mt-58">
       <div className="container mx-auto lg:px-4">
         <div className="grid grid-cols-2 lg:gap-6">
           {/* Contact Information */}
