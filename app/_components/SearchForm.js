@@ -23,7 +23,7 @@ function SearchForm() {
         type="text"
         value={packageId}
         onChange={(e) => setPackageId(e.target.value)}
-        placeholder="ابحث عن شحنتك"
+        placeholder="أدخل رقم السند"
         className="bg-accent-50 text-primary-950 rounded-r-xl py-1 pr-3 pl-10 placeholder:text-start focus:outline-none sm:py-3 sm:pr-10 sm:pl-55 md:py-4 md:pr-12 md:pl-80"
       />
       <button
