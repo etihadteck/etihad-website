@@ -57,12 +57,14 @@ export default async function PackageDetails({ packageId }) {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-2">
-          <p>الرقم التسلسلي</p>
-          <p className="bg-accent-50 text-accent-700 w-full rounded-md px-6 py-2 text-center">
-            {packageData.serialNumber}
-          </p>
-        </div>
+        {packageData.serialNumber && (
+          <div className="grid grid-cols-1 gap-2">
+            <p>الرقم التسلسلي</p>
+            <p className="bg-accent-50 text-accent-700 w-full rounded-md px-6 py-2 text-center">
+              {packageData.serialNumber}
+            </p>
+          </div>
+        )}
 
         {packageData.destination && (
           <div className="grid grid-cols-1 gap-2">
@@ -73,11 +75,9 @@ export default async function PackageDetails({ packageId }) {
           </div>
         )}
 
-        {packageData.status && (
-          <div className="col-span-full">
-            <ProgressBar status={packageData.status} />
-          </div>
-        )}
+        <div className="col-span-full">
+          <ProgressBar status={packageData.status} />
+        </div>
       </div>
 
       <PackageDetailsClient packageId={packageId} />
