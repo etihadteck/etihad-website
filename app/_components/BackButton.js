@@ -22,7 +22,7 @@ function BackButton({ label = '' }) {
         {label !== '' ? (
           <span>{label}</span>
         ) : (
-          <HiArrowLeft className="h-6 w-6 font-bold" />
+          <HiArrowLeft className="h-4 w-4 font-bold md:h-6 md:w-6" />
         )}
       </button>
     </form>

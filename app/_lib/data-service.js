@@ -26,7 +26,9 @@ export async function getPackageById(id) {
     status: data.shipments.status,
     arrivalDate: data.shipments.arrivalDate,
     price: data.price,
-    weight: data.weight,
     cbm: data.cbm,
+    totalCount: data.totalCount,
+    destination: data.destination,
+    serialNumber: data.serialNumber,
   };
 }
