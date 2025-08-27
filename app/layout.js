@@ -11,6 +11,9 @@ export const metadata = {
   },
   description: `
 نحن في شركة الاتحاد نُقدم خدمات الشحن الجزئي من الصين إلى المملكة العربية السعودية بخبرة وكفاءة، ونلبي احتياجات التجار وأصحاب الأعمال والمتاجر الإلكترونية عبر حلول مرنة وآمنة.`,
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default function RootLayout({ children }) {
