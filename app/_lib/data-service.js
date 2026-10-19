@@ -2,18 +2,10 @@ import { supabase } from './supabase';
 import { notFound } from 'next/navigation';
 
 export async function getPackageById(id) {
+  // The tables are staff-only; this database function returns just the
+  // public tracking fields for one package
   const { data, error } = await supabase
-    .from('packages')
-    .select(
-      `
-      *,
-      shipments:shipmentId (
-        status,
-        arrivalDate
-      )
-    `,
-    )
-    .eq('packageId', id)
+    .rpc('get_public_package', { p_package_id: id })
     .single();
 
   if (error) {
@@ -23,8 +15,8 @@ export async function getPackageById(id) {
 
   return {
     packageId: data.packageId,
-    status: data.shipments.status,
-    arrivalDate: data.shipments.arrivalDate,
+    status: data.status,
+    arrivalDate: data.arrivalDate,
     price: data.price,
     cbm: data.cbm,
     totalCount: data.totalCount,
