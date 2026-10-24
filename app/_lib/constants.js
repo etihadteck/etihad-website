@@ -3,16 +3,23 @@ import {
   HiBuildingLibrary,
   HiCheckCircle,
 } from 'react-icons/hi2';
-import { GiCargoShip } from 'react-icons/gi';
+import { GiCargoCrane, GiCargoShip } from 'react-icons/gi';
 
 export const SHIPMENT_STATUSES = {
   'collected-in-china': {
-    label: 'في الصين',
+    label: 'في مستودع الصين',
     color: 'text-orange-600',
     bgColor: 'bg-accent-50',
     borderColor: 'border-blue-200',
     description:
       'تم جمع الشحنة من المورد في الصين, وبنجهزها للشحن باسرع وقت 🚶',
+  },
+  'at-china-port': {
+    label: 'في ميناء الصين',
+    color: 'text-cyan-600',
+    bgColor: 'bg-accent-50',
+    borderColor: 'border-cyan-200',
+    description: 'الشحنة في ميناء الصين وبتنشحن على السفينة قريب 🏗️',
   },
   'in-ocean': {
     label: 'في البحر',
@@ -42,6 +49,11 @@ export const SHIPMENT_STATUS_OPTIONS = [
     value: 'collected-in-china',
     label: 'تم الاستلام في الصين',
     icon: <HiInboxArrowDown className="text-primary h-10 w-10" />,
+  },
+  {
+    value: 'at-china-port',
+    label: 'الشحنة في ميناء الصين',
+    icon: <GiCargoCrane className="text-primary h-10 w-10" />,
   },
   {
     value: 'in-ocean',
